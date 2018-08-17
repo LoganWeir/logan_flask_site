@@ -5,4 +5,4 @@
 *.swp
 *.DS_Store
 metastore_db/
-mysite_env/
+site/mysite_env/
