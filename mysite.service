@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve my site!
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/logan_flask_site/site
+Environment="PATH=/home/ubuntu/logan_flask_site/site/mysite_env/bin"
+ExecStart=/home/ubuntu/logan_flask_site/site/gunicorn --workers 3 --bind unix:site.sock -m 007 wsgi:server
+
+[Install]
+WantedBy=multi-user.target
