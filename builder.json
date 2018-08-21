@@ -26,11 +26,6 @@
       ],
       "provisioners": [
         {
-            "type": "file",
-            "source": "./mysite.service",
-            "destination": "/etc/systemd/system/mysite.service"
-        },
-        {
             "type": "shell",
             "script": "./instance_installing.sh"
         }
