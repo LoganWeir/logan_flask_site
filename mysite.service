@@ -7,7 +7,7 @@ User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/logan_flask_site/site
 Environment="PATH=/home/ubuntu/logan_flask_site/site/mysite_env/bin"
-ExecStart=/home/ubuntu/logan_flask_site/site/mysite_env/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/logan_flask_site/site/mysite.sock -m 007 wsgi:app
+ExecStart=sudo /home/ubuntu/logan_flask_site/site/mysite_env/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/logan_flask_site/site/mysite.sock -m 007 wsgi:app
 
 [Install]
 WantedBy=multi-user.target
