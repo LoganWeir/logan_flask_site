@@ -16,10 +16,14 @@ pwd
 
 sudo python3 -m venv /home/ubuntu/logan_flask_site/site/mysite_env/
 
-sudo chown -R ubuntu:ubuntu /home/ubuntu/logan_flask_site/site/mysite_env/
+sudo chown -R ubuntu:ubuntu /home/ubuntu/logan_flask_site/
 
 source logan_flask_site/site/mysite_env/bin/activate
 
 pip install -r logan_flask_site/site/requirements.txt
 
 deactivate
+
+sudo systemctl start mysite
+
+sudo systemctl enable mysite
